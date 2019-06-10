@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+<body>
+        <div class="jumbotron"style="text-align:center">
+                <h1 class="display-4">당신이 입력한 텍스트는 {{total}} 개 단어로 구성되어 있습니다.</h1>
+                <br>
+            
+                <hr class="my-4">
+                <br>
+                <h2>입력한 텍스트:</h2>
+                    {{full}}
+
+                <br><br>
+                    <h2>단어 카운트:</h2>
+                    {% for word,num in dictionary %}
+                    {{word}} : {{num}}
+                    <br>
+                    {%endfor%}
+                
+                
+                
+                <br><br><br>
+                <a class="btn btn-dark" href="{%url 'home'%}" role="button">다시 입력하기</a>
+              </div>
+    
+</body>
